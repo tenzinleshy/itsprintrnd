@@ -43,7 +43,7 @@ foreach($currencyIdsArr as $currencyId => $rateArr){
 }
 // var_dump($currencyIdsArr);
 
-$tableStr = '<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">';
+$tableStr = '<center><table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">';
 $tableStr.=	'
 	<tr>
 		<th class="mdl-data-table__cell--non-numeric">Currency name
@@ -73,7 +73,7 @@ $tableStr.=	'
 			</tr>';
 	}
 
-$tableStr.='</table>';
+$tableStr.='</table></center>';
 
 echo $tableStr;
 
