@@ -1,21 +1,19 @@
 <?php
 
 
-// header ("Content-Type: text/html; charset=utf-8");
-// echo "<!DOCTYPE html>
-// <html>
-// <head>
-// <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\">
-// <title>Open Server</title>
-// </head>
-// <body style=\"background: url(fon.png) top left repeat-x\">
-// <center>
-// <br><br><br><div style=\"width: 600px;\"><span style=\"font-size: 32px; color: green; font-family: Arial, Verdana; text-shadow: 0 1px 0 #fff\">Добро пожаловать в Open Server!</span>
-// <br><br><br><span style=\"font-size: 32px; color: #333; font-family: Verdana, Arial;\">Он работает ;-)</span>
-// <br><img src=\"st.png\" style=\"margin: 40px 0\"><br><a href=\"http://open-server.ru/docs/\" style=\"font-size: 24px; color: #048acd; font-family: Arial;\">Руководство пользователя</a></span><br><br><br></div>
-// </center>
-// </body>
-// </html>";
+ header ("Content-Type: text/html; charset=utf-8");
+ echo '<!DOCTYPE html>
+ <html>
+ <head>
+ <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\">
+ <title>Open Server</title>
+ </head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+ <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+ <body style=\"background: url(fon.png) top left repeat-x\">
+ </body>
+ </html>';
 
 $currencyIdsArr = array(
 		'EUR'=>array(),
@@ -45,32 +43,32 @@ foreach($currencyIdsArr as $currencyId => $rateArr){
 }
 // var_dump($currencyIdsArr);
 
-$tableStr = '<table border="1" cellpadding="2">';
+$tableStr = '<table border="1" cellpadding="2" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">';
 $tableStr.=	'
 	<tr>
-		<th>Currency name
+		<th class="mdl-data-table__cell--non-numeric">Currency name
 		</th>
-		<th>Rate
+		<th class="mdl-data-table__cell--non-numeric">Rate
 		</th>
-		<th>Ask
+		<th class="mdl-data-table__cell--non-numeric">Ask
 		</th>		
-		<th>Bid
+		<th class="mdl-data-table__cell--non-numeric">Bid
 		</th>			
-		<th>Date
+		<th class="mdl-data-table__cell--non-numeric">Date
 		</th>			
 	</tr>';
 	foreach($currencyIdsArr as $currencyId => $rateArr){
 		$tableStr.=	'
 			<tr>
-				<td>'.$currencyId.'
+				<td class="mdl-data-table__cell--non-numeric">'.$currencyId.'
 				</td>
-				<td>'.$rateArr["rate"].'
+				<td class="mdl-data-table__cell--non-numeric">'.$rateArr["rate"].'
 				</td>
-				<td>'.$rateArr["ask"].'
+				<td class="mdl-data-table__cell--non-numeric">'.$rateArr["ask"].'
 				</td>		
-				<td>'.$rateArr["bid"].'
+				<td class="mdl-data-table__cell--non-numeric">'.$rateArr["bid"].'
 				</td>			
-				<td>'.$rateArr["date"].'
+				<td class="mdl-data-table__cell--non-numeric">'.$rateArr["date"].'
 				</td>			
 			</tr>';
 	}
